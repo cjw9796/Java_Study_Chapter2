@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>이펙트</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+	
+	$("#togglebtn").on("click",function(){
+	$("#text").toggle("slow");
+		
+	});
+	
+});
+
+
+</script>
+</head>
+<body>
+웹페이지에서 효과를 손쉽게 적용할 수 있게 다양한 메서드 제공 
+.hide() 숨기기 <br>
+.show() 보여주기 <br>
+
+ <h1>요소의 숨김 표시</h1>
+	
+	<button id="togglebtn">토글버튼 </button>
+	
+ 	<p> 요소 표시 토글
+ 		선택한 요소가 어떤 상태인지(현재 상태를 보고 다른 동작을 실행한다.)
+ 		</p>
+	
+	<p id="text">이 단락을 숨기거나 나타나게 할 거에요</p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<style type="text/css">
+#divBox {
+	width: 100px;
+	height: 100px;
+	background-color: yellow;
+	border: 5px solid orange;
+	margin-top: 20px;
+}
+</style>
+
+<script type="text/javascript">
+	$(function() {
+		$("#fadeInBtn").on("click", function() {
+			$("#divBox").fadeIn(); // id가 "divBox"인 요소를 점점 나타나게 함. fadeIn(1000)처럼 시간을 넣을 수도 있음 
+		});
+		$("#fadeOutBtn").on("click", function() {
+			$("#divBox").fadeOut(); // id가 "divBox"인 요소를 점점 사라지게 함.
+		});
+	});
+</script>
+
+
+</head>
+<body>
+	<h1>페이드 인과 페이드 아웃</h1>
+	<button id="fadeInBtn">페이드 인</button>
+	<button id="fadeOutBtn">페이드 아웃</button>
+	<div id="divBox"></div>
+	<p>제이쿼리에서 페이드 효과는 CSS opacity 속성값을 빠르게 변경하여 표현해요!</p>
+</body>
+</html>

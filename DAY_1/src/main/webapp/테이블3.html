@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>테이블</title>
+
+<script type="text/javascript" src="js/table3.js"></script>
+
+</head>
+<body>
+
+	<form action="?">
+		<table id="inTable" border="1" cellpadding="5" cellspacing="0">
+			<tr>
+				<th>제목</th>
+				<td><input type="text" name="id"/></td>
+			</tr>
+			<tr>
+				<th>아이디</th>
+				<td><input type="text" name="password"/></td>
+			</tr>
+			<tr>
+				<th>비밀번호</th>
+				<td><input type="text" name="address"/></td>
+			</tr>
+			<tr>
+				<th>내용</th>
+				<td><textarea cols="100" rows="30" name="phoneNo"></textarea></td>
+			</tr>
+		</table><br/>
+		
+		<input type="button" value="등록" onclick="tableAdd()"/>
+	</form>
+	<input type="button" value="취소" onclick="removeLast()"/>
+	<input type="button" value="초기화" onclick="removeAll()"/><br/><br/>
+	
+	<div id="addTable">
+		<table id="ctb" border="1" cellpadding="5" cellspacing="0">
+			<thead>
+				<tr>
+					<th>글번호</th>
+					<th>제목</th>
+					<th>작성자</th>
+					<th>작성일</th>
+					<th>조회수</th>
+				</tr>
+			</thead>
+			<tbody id="addtr">
+			
+			</tbody>
+		</table>
+	</div>
+	
+</body>
+</html>

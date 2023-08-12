@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<style type="text/css">
+#hidebtn, #showbtn, #togglebtn, #slideupbtn, #slideDownbtn,
+	#slideTogglebtn, #fadeOutbtn, #fadeInbtn {
+	background-color: white;
+	width: 150px;
+	border: 2px solid skyblue;
+	transition: 0.5s;
+}
+
+#hidebtn:hover, #showbtn:hover, #togglebtn:hover, #slideupbtn:hover,
+	#slideDownbtn:hover, #slideTogglebtn:hover, #fadeOutbtn:hover,
+	#fadeInbtn:hover {
+	background-color: hotpink;
+	width: 200px;
+}
+</style>
+<script type="text/javascript">
+	$(function() {
+
+		$("#hidebtn").on("click", function() {
+			$("img").hide(); //hidebtn을 클릭했을때 img를 hide()하겠다.
+		})
+		$("#showbtn").on("click", function() {
+			$("img").show(); //showbtn을 클릭했을때 img를 show()하겠다.
+		})
+		$("#togglebtn").on("click", function() {
+			$("img").toggle();  //togglebtn을 클릭했을때 img를 toggle()하겠다. 
+		})
+		$("#slideupbtn").on("click", function() {
+			$("img").slideUp();
+		})
+		$("#slideDownbtn").on("click", function() {
+			$("img").slideDown();
+		})
+		$("#slideTogglebtn").on("click", function() {
+			$("img").slideToggle();
+		})
+		$("#fadeOutbtn").on("click", function() {
+			$("img").fadeOut();
+		})
+		$("#fadeInbtn").on("click", function() {
+			$("img").fadeIn();
+		})
+
+	});
+
+
+
+	//이벤트 메소드 숨겨놨다가 마우스 올리면 버튼들 나타나게 하는 함수 
+$(() =>{    
+	$('.menu button').hide(); // 버튼 숨기기
+	$('#h1').hover(
+		function(){	
+			$(this).nextAll('button').stop().slideDown(); // 마우스를 올리면 h1 다음에 있는 모든 버튼들이 slideDown 됨
+		}
+		,
+		function(){
+			$(this).nextAll('button').stop().slideUp(); // 마우스를 뗄 때 버튼들이 slideUp 됨
+		}
+	);
+});
+
+
+	
+
+	
+	
+	
+	
+</script>
+</head>
+<body>
+
+	<div class="menu">
+		<h1 id="h1">이펙트 메소드</h1>
+		<button id="hidebtn">hide</button>
+		<br>
+		<button id="showbtn">show</button>
+		<br>
+		<button id="togglebtn">toggle</button>
+		<br>
+		<button id="slideupbtn">slideup</button>
+		<br>
+		<button id="slideDownbtn">slideDown</button>
+		<br>
+		<button id="slideTogglebtn">slideToggle</button>
+		<br>
+		<button id="fadeOutbtn">fadeOut</button>
+		<br>
+		<button id="fadeInbtn">fadeIn</button>
+		<br>
+	</div>
+
+
+
+
+	<img id="img" title="img01+" src="./images/img01.jpg" />
+</body>
+</html>

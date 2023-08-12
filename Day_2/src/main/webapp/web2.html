@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>웹 스토리지</title>
+	<script defer type="text/javascript" src="js/web2.js"></script>
+</head>
+<body>
+	<h1>web2</h1>
+	localStorage 
+		- 로컬에서 도메인 별로 지속되는 storage 공간(저장하는 공간)
+		- 제한 시간 없고 , 브라우저가 죽지 않는다. 
+		- 값을 지우려면 직접 지워줘야된다. 
+		- 여러 새 창, 새탭이 열려도 데이터 공유가 가능하다!
+	
+	sessionStorage 
+	    - 세션이 (프로세스 , 탭, 브라우저) 종료 될 때까지 지속되는 storage
+	    - 새창,새탭이 열리면 데이터 공유가 x
+	    
+	프로퍼티 타입으로 key와 value 자바스크립트에서 object(객체)
+	저장할 때 무조건 문자열 밖에 저장이 안된다. 
+	
+	<!-- 값을 저장 , 불러오기  -->
+	setItem('key':'value')  
+	
+	getItem('key')
+	
+	removeItem('key') 해당 키를 받으면 한쌍을 동시에 제거!
+	
+	clear() 모든 데이터 지우기 
+	
+	length : 저장된 key,value 해당하는 길이를 반환
+	
+	Object.keys() 현재 웹 스토리지에 있는 모든 key만 가져온다!
+	
+	웹스토리지 확인 방법 
+	크롬 -> F12 -> application 탭 가면 좌측에 확인 가능하다.  
+	
+</body>
+</html>

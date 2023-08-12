@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>이펙트</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+	$("#showbtn").on("click",function(){
+		$("#text").show("1000"); //id가 text인 요소가 나타난다.
+							//show(1000) : 1초에 걸쳐서 나타난다. 
+	})	
+	$("#hidebtn").on("click",function(){
+		$("#text").hide("fast"); //id가 text인 요소가 숨겨짐.
+							//hide("fast")
+	})
+	
+	
+});
+
+
+</script>
+</head>
+<body>
+웹페이지에서 효과를 손쉽게 적용할 수 있게 다양한 메서드 제공 
+.hide() 숨기기 <br>
+.show() 보여주기 <br>
+
+ <h1>요소의 숨김 표시</h1>
+	<button id="showbtn">요소표시 </button>
+	<button id="hidebtn">요소 숨기기</button>
+	<p> css의 display 속성이 none으로 설정되어 있기 때문에 웹 페이지의 레이아웃에서 아예 사라져 버린다.</p>
+	
+	<p id="text">이 단락을 숨기거나 나타나게 할 거에요</p>
+</body>
+</html>

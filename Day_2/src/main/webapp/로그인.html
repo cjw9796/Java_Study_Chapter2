@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript"
+	src="https://code.jquery.com/jquery-3.6.4.min.js"></script>   <!--jquery연결-->
+    
+    <title>Document</title>
+</head>
+
+<style>
+form {
+        width: 520px;
+        height: auto;
+        padding-left: 10px;
+        margin: 50px auto;
+        text-align: center;
+        padding-top: 100px;
+    }
+    fieldset{
+        border: none;   /*fieldset의 border 없애기*/
+    }
+
+    .loginbtn {
+        width: 210px;
+        height: 40px;
+        border-radius: 10px;
+        background: linear-gradient(to left, rgb(41, 41, 247), skyblue)
+    }
+
+    .underline {
+        background-color: dodgerblue;
+        display: inline-block;
+        height: 2px;
+        left: 50px;
+        margin-top: -4px;
+        position: absolute;
+        top: 185px;
+        -webkit-transform: scale(0, 1);
+        transform: scale(0, 1);
+        -webkit-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+        width: 220px;
+    }
+
+    .input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #CCC;
+        color: #555;
+        box-sizing: border-box;
+        font-family: 'Arvo';
+        font-size: 18px;
+        height: 50px;
+        left: 10%;
+        margin: -25px 0 0 -100px;
+        padding: 10px 0px;
+        position: relative;
+        top: 50%;
+        width: 300px;     /*입력창 width 조정*/
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    ul{
+       list-style-type:none;
+       margin: 30px;
+    }
+    li{
+        margin: 30px;
+    }
+</style>
+<body>
+    <body>
+    <form id="joinmembership">
+        <fieldset>
+            <h2>로그인</h2>
+
+
+            <ul>
+                <li>
+                    <label for="" class="login"></label>
+                    <input type="text" class="input" id="id" placeholder="아이디">
+                    <span class="underline"></span>
+
+                </li>
+                <li>
+                    <label for="" class="login"></label>
+                    <input type="password" class="input" id="password" placeholder="비밀번호">
+                    <span class="underline"></span>
+                </li>
+            </ul>
+
+            <button type="submit" class="loginbtn" id="submit-button">login</button>
+        </fieldset>
+        <script src="로그인.js"></script> <!--js연결-->
+    </form>
+
+
+
+</body>
+</body>
+</html>
